@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide Show</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+     <style>
+        *{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: lightgreen;
+}
+.container{
+    width: 80%;
+    margin: 20px auto;
+    border: 5px ridge whitesmoke;
+    border-radius: 20px;
+    padding: 20px;
+}
+.boxes{
+    display: inline-block;
+    width: 31%;
+    height: 180px;
+    border: 2px solid darkred;
+    margin: 0px 8px;
+    text-align: center;
+    font-size: 30px;
+    
+}
+#box1{
+    background-color: lightcoral;
+}
+#box2{
+    background-color: lightpink;
+}
+#box3{
+    background-color: lightslategrey;
+}
+.hide{
+    display: none;
+}
+     </style>
+</head>
+<body>
+    <div class="container">
+        <div class="boxes hide" id="box1">1</div>
+        <div class="boxes" id="box2">2
+            <input type="text" placeholder="Full Name">
+        </div>
+        <div class="boxes" id="box3">3</div>
+        <button id="add">add</button>
+        <button id="delete">remove</button>
+    </div>
+    <script>
+        let add, delet, box1, box2, box3, boxes;
+        add = document.querySelector("#add");
+        delet = document.querySelector("#delete");
+        box1 = document.querySelector("#box1");
+        box2 = document.querySelector("#box2");
+        box3 = document.querySelector("#box3");
+        const boxShow = () => {
+            alert("Add button Activate");
+            box1.classList.remove("hide")
+        }
+        const boxHide = () => {
+            alert("Remove button Activate");
+            box2.classList.add("hide");
+        }
+        add.addEventListener("click", boxShow);
+        delet.addEventListener("click", boxHide);
+    </script>
+</body>
+</html>

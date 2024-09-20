@@ -1,0 +1,37 @@
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: lightgreen;
+}
+.container{
+    width: 80%;
+    margin: 20px auto;
+    border: 5px ridge whitesmoke;
+    border-radius: 20px;
+    padding: 20px;
+}
+.boxes{
+    display: inline-block;
+    width: 31%;
+    height: 180px;
+    border: 2px solid darkred;
+    margin: 0px 8px;
+    text-align: center;
+    font-size: 30px;
+    
+}
+#box1{
+    background-color: lightcoral;
+}
+#box2{
+    background-color: lightpink;
+}
+#box3{
+    background-color: lightslategrey;
+}
+.hide{
+    display: none;
+}
